@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+        .checked {
+  color: orange;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container" style="height: 550px;width: 100%;background-color: rgb(214, 216, 218);">
+        <div class="row">
+            <h5 style="color:blue;margin-left: 550px;">SHOP ONLINE</h5>
+        </div>
+        <div class="row">
+            <h1 style="margin-left: 450px;">Books BestSellers</h1>
+        </div>
+        <div class="row" style="display: flex;">
+            <%for(let i=0;i<details.length;i++){%>
+            <div class="col">
+                <div
+                    style="height: 400px;width: 250px;background-color: aliceblue;margin-left: 40px;margin-right: 20px;">
+                   <a href="/thired/<%=i%>"> <img src="<%=details[i].img%>"style="height:250px;width:200px;margin-left:20px;">
+                   </a>  <br>
+            <p style="margin-left:40px;opacity:0.5px;"><%=details[i].discription%></p> 
+                <h3 style="margin-left:40px"><%=details[i].title%></h3>
+               <%for(let str=0;str<5;str++){%> 
+                    <%if(str==details[i].star){%>
+                    <span style="margin-left: 10px;" class="fa fa-star checked"></span>
+                    <%}else%>
+                    <span style="margin-left: 10px;" class="fa fa-star "></span>
+                <%}%>
+            <p style="margin-left: 50px;"><%=details[i].rate%></p><br>
+                </div>
+            </div><%}%>
+            <!-- <div class="col">
+                <div
+                    style="height: 400px;width: 250px;background-color: aliceblue;margin-left: 20px;margin-right: 20px;">
+                    <img src="/img/b2.jpg"style="height:200px;width:150px;margin-left:30px;margin-top: 30px;">
+                    <p style="margin-left:40px;">item,simple,smart</p>
+                    <h3 style="margin-left:40px">The Love songs</h3>
+                   <p style="margin-left: 70px;"> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br>$65</p><br>
+                
+                </div>
+            </div>
+            <div class="col">
+                <div
+                    style="height: 400px;width: 250px;background-color: aliceblue;margin-left: 20px;margin-right: 20px;">
+                    <img src="/img/b3.jpg"style="height:200px;width:150px;margin-left:30px;margin-top: 30px;">
+                    <p style="margin-left:40px;">item,simple,smart</p>
+                    <h3 style="margin-left:40px">The Love songs</h3>
+                   <p style="margin-left: 70px;"> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br>$65</p><br>
+                
+                </div>
+            </div>
+            <div class="col">
+                <div
+                    style="height: 400px;width: 250px;background-color: aliceblue;margin-left: 40px;margin-right: 20px;">
+                    <img src="/img/b4.jpg"style="height:200px;width:150px;margin-left:30px;margin-top: 30px;">
+                    <p style="margin-left:40px;">item,simple,smart</p>
+                    <h3 style="margin-left:40px">The Love songs</h3>
+                   <p style="margin-left: 70px;"> <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span><br>$65</p><br>
+                
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+</body>
+
+</html>

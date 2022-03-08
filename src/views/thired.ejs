@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 450px;
+            background-color: rgb(224, 237, 238);
+        }
+        .box{
+            background-color: rgb(253, 252, 252);
+            width: 400px;
+            height: 400px;
+            margin-top: 25px;
+            margin-right: 107px;
+            margin-left: 17px
+        }
+        .dis{
+            display: flex;
+            /* text-align: center; */
+        
+        }
+        .img{
+            text-align: center;
+            padding-top: 50px;
+        }
+        .btn{
+            background-color: green;
+        }
+    </style>
+   </head>
+   <body>
+    <div class="container">
+        <div class="row dis">
+        <div class="col-md-6 box" ><div class="img"><img src="<%=book.img%>"></div></div>
+        <div class="col-md-6"><h2><%=book.title%></h2>
+            <p><del>$99.00</del> &nbsp;<%=book.rate%></p>
+            <p><%=book.dis%></p>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select><input type="button" class="btn"value="Buy Now">
+              <h5>Catagory:<%=book.catagory%></h5>
+              <h5><%=book.discription%></h5>
+              <h5>Product id:<%=book.productid%></h5>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
